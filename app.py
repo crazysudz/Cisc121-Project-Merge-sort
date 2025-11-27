@@ -71,7 +71,6 @@ def mergeSortBuilder(arr, l=None, r=None):
         return TreeNode(arr[l:r+1])
 
 def debug_tree_structure(text):
-    
     if not text:
         return ""
     try:

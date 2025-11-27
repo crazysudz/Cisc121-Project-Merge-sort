@@ -1,5 +1,12 @@
 import gradio as gr
 
+# stores the state of the array at every step.
+class TreeNode:
+    def __init__(self, current_state):
+        self.current_state = list(current_state)
+        self.left = None
+        self.right = None
+
 def merge(arr, l, m, r):
     n1 = m - l + 1
     # calculates the size of the left array 
@@ -37,38 +44,53 @@ def merge(arr, l, m, r):
         k += 1
     # copys L and R back into the main arr[k]
 
-def mergeSort(arr, l=None, r=None):
-    # Calculate l and r on first call 
+#Builds and returns a Tree structure.
+def mergeSortBuilder(arr, l=None, r=None):
     if l is None:
         l = 0
     if r is None:
         r = len(arr) - 1
+    
     if l < r:
-        # if this statement is false that means that there is only one element in the recursive call 
         m = l + (r - l) // 2
-        # sets the middle of the array
-        mergeSort(arr, l, m)
-        # sorts the left half
-        mergeSort(arr, m + 1, r)
-        # sorts the right half 
+        
+        # Recurse to build children nodes first
+        left_node = mergeSortBuilder(arr, l, m)
+        right_node = mergeSortBuilder(arr, m + 1, r)
+        
+        # Perform the merge 
         merge(arr, l, m, r)
-        # merges the two arrays
+        
+        # Saves the merged state
+        node = TreeNode(arr[l:r+1])
+        node.left = left_node
+        node.right = right_node
+        return node
+    else:
+        # Base case: single element left
+        return TreeNode(arr[l:r+1])
 
-def sort_input(text):
-    """Parse comma-separated integers, sort them in-place with mergeSort and return a string."""
+def debug_tree_structure(text):
+    
     if not text:
         return ""
     try:
         arr = [int(x.strip()) for x in text.split(",") if x.strip() != ""]
-    except ValueError:
-        return "Input must be comma-separated integers"
-    mergeSort(arr)
-    return ", ".join(str(x) for x in arr)
+        
+        # Build the tree
+        root = mergeSortBuilder(arr)
+        
+        # Simple debug output to verify the object structure
+        return f" Tree Constructed Successfully {root.current_state}\nLeft Child: {root.left.current_state}\nRight Child: {root.right.current_state}"
+    except Exception as e:
+        return f"Error: {str(e)}"
 
+# --- Gradio UI ---
 demo = gr.Interface(
-    fn=sort_input,
-    inputs=gr.Textbox(label="Input Array (comma separated)"),
-    outputs=gr.Textbox(label="Sorted Array")
+    fn=debug_tree_structure,
+    inputs=gr.Textbox(label="Input Array (comma separated)", value="5, 1, 4, 2, 8"),
+    outputs=gr.Textbox(label="Debug Output"),
+    title="Merge Sort",
+    description="visuallize the merge sort with nodes and branching trees."
 )
 demo.launch()
-

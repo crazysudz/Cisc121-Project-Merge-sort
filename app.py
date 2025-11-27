@@ -1,7 +1,7 @@
 import gradio as gr
 
-# stores the state of the array at every step.
 class TreeNode:
+    # Nodes used for the visualization tree
     def __init__(self, current_state):
         self.current_state = list(current_state)
         self.left = None
@@ -44,52 +44,100 @@ def merge(arr, l, m, r):
         k += 1
     # copys L and R back into the main arr[k]
 
-#Builds and returns a Tree structure.
 def mergeSortBuilder(arr, l=None, r=None):
+    # Calculate l and r on first call 
     if l is None:
         l = 0
     if r is None:
         r = len(arr) - 1
     
     if l < r:
+        # if this statement is false that means that there is only one element in the recursive call 
         m = l + (r - l) // 2
+        # sets the middle of the array
         
-        # Recurse to build children nodes first
         left_node = mergeSortBuilder(arr, l, m)
+        # sorts the left half
+        
         right_node = mergeSortBuilder(arr, m + 1, r)
+        # sorts the right half 
         
-        # Perform the merge 
         merge(arr, l, m, r)
+        # merges the two arrays
         
-        # Saves the merged state
         node = TreeNode(arr[l:r+1])
         node.left = left_node
         node.right = right_node
         return node
     else:
-        # Base case: single element left
         return TreeNode(arr[l:r+1])
 
-def debug_tree_structure(text):
+# --- HTML Generator ---
+def tree_to_html(node):
+    if node is None:
+        return ""
+    
+    # Box styling
+    node_html = f"""
+    <div style="
+        border: 2px solid #333; 
+        padding: 8px; 
+        margin: 5px; 
+        background-color: white; 
+        border-radius: 4px;
+        text-align: center;
+        font-family: monospace;
+        font-weight: bold;
+    ">
+        {node.current_state}
+    </div>
+    """
+    
+    children_html = ""
+    # Recursively generate HTML for children side-by-side
+    if node.left or node.right:
+        children_html = f"""
+        <div style="display: flex; gap: 20px; justify-content: center; margin-top: 10px;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                {tree_to_html(node.left)}
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                {tree_to_html(node.right)}
+            </div>
+        </div>
+        """
+    
+    # Vertical layout: Parent on top, Children below
+    return f"""
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        {node_html}
+        {children_html}
+    </div>
+    """
+
+# --- Driver Function ---
+def visualize_html(text):
     if not text:
         return ""
     try:
         arr = [int(x.strip()) for x in text.split(",") if x.strip() != ""]
-        
-        # Build the tree
         root = mergeSortBuilder(arr)
         
-        # Simple debug output to verify the object structure
-        return f" Tree Constructed Successfully {root.current_state}\nLeft Child: {root.left.current_state}\nRight Child: {root.right.current_state}"
+        # Wrap the whole tree in a scrollable container
+        return f"""
+        <div style="width: 100%; overflow-x: auto; padding: 20px; display: flex; justify-content: center;">
+            {tree_to_html(root)}
+        </div>
+        """
     except Exception as e:
-        return f"Error: {str(e)}"
+        return f"<div style='color:red'>Error: {str(e)}</div>"
 
 # --- Gradio UI ---
 demo = gr.Interface(
-    fn=debug_tree_structure,
+    fn=visualize_html,
     inputs=gr.Textbox(label="Input Array (comma separated)", value="5, 1, 4, 2, 8"),
-    outputs=gr.Textbox(label="Debug Output"),
-    title="Merge Sort",
-    description="visuallize the merge sort with nodes and branching trees."
+    outputs=gr.HTML(label="Visualization"),
+    title="Merge Sort - Stage 3 (HTML Visualization)",
+    description="In this stage, we have replaced the debug text with a recursive HTML visualization using Flexbox."
 )
 demo.launch()

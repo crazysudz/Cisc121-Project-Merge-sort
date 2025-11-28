@@ -83,8 +83,7 @@ The flow is designed as: **Input** (User provides a raw list) → **Processing**
 ## 📊 Algorithm Flowchart
 
 The following diagram illustrates the logic implemented in the code:
-<img src="./Mergesort_flowchart.svg">
-![](./Mergesort_flowchart.svg)
+<img src="./Mergesort_flowchart.png">
 
 
 ---

@@ -22,6 +22,7 @@ short_description: Python app that visually simulates merge sort algorithm
 [![Algorithm](https://img.shields.io/badge/Algorithm-Merge%20Sort-blueviolet?style=for-the-badge)](#)
 
 </div>
+![til](./CISC 121 002 Mergesort Project test.gif)
 
 ---
 

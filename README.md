@@ -36,6 +36,7 @@ The goal of this project is to create a Python app that demonstrates the **Merge
 
 | File | Description |
 | :--- | :--- |
+| `requirements.txt` | The dependencies used |
 | `app.py` | The main application file |
 | `CISC 121 002 Mergesort Project test.gif` | Test of the program as a gif |
 | `Mergesort_flowchart.svg` | flowchart showing the logic behind the sort |

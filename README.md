@@ -28,11 +28,11 @@ short_description: Python app that visually simulates merge sort algorithm
 ## Demo video
 <img src="./CISC 121 002 Mergesort Project test.gif"/>
 
-## 🚀 Objective
+## Objective
 
 The goal of this project is to create a Python app that demonstrates the **Merge Sort** algorithm in a visually interactive way using a graphical user interface. This application showcases computational thinking, algorithm design, testing, documentation skills, and knowledge of sorting algorithms.
 
-## 📦 Project Deliverables
+## Project Deliverables
 
 | File | Description |
 | :--- | :--- |
@@ -44,7 +44,7 @@ The goal of this project is to create a Python app that demonstrates the **Merge
 
 ---
 
-## 🧠 Computational Thinking & Problem Breakdown
+## Computational Thinking & Problem Breakdown
 
 I chose **Merge Sort** to implement and visualize. It creates a unique decision tree and effectively demonstrates the **divide and conquer** approach. Additionally, it maintains a time complexity of O(n log n) regardless of the dataset, making it highly efficient.
 
@@ -80,7 +80,7 @@ The flow is designed as: **Input** (User provides a raw list) → **Processing**
 
 ---
 
-## 📊 Algorithm Flowchart
+## Algorithm Flowchart
 
 The following diagram illustrates the logic implemented in the code:
 <img src="./Mergesort_flowchart.png">
@@ -88,14 +88,17 @@ The following diagram illustrates the logic implemented in the code:
 
 ---
 
-## 🎯 How To Use The App
+## How To Use The App
 - **Input Data:** Enter an integer-only array in the input box, with commas separating each element.
 - **Random Generation:** Alternatively, click the `Generate Random` button to create a random array.
 - **Visualize:** Once you have an array you are happy with, press the `Sort & Visualize` button.
 - **Result:** You will see the output visualization of the input array as it is passed through the Merge Sort algorithm.
 
-## 🛠️ Technologies Used
-
+## Author & Acknowledgment
+- **Author:** [Your Name Here]
+- **Course:** CISC-121
+- **University:** Queen's University
+- **Project Inspiration:** Merge Sort Algorithm Visualization
 - **Python**: Core programming language
 - **Gradio**: Web-based GUI framework
 - **Hugging Face Spaces**: Deployment platform

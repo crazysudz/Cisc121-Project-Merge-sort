@@ -36,9 +36,9 @@ The goal of this project is to create a Python app that demonstrates the **Merge
 | File | Description |
 | :--- | :--- |
 | `app.py` | The main application file |
-| `requirements.txt` | List of dependencies  |
-| `README.md` | Documentation |
-| **Hugging Face App** | https://huggingface.co/spaces/smallduds/CISC_121_002_Mergesort_Project|
+| `requirements.txt` | List of dependencies (i.e., Python packages, e.g., Gradio) |
+| `README.md` | Documentation matching marking criteria |
+| **Hugging Face App** | The deployed version of the app (Linked above) |
 
 ---
 

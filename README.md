@@ -1,14 +1,4 @@
----
-title: CISC 121 002 Mergesort Project
-emoji: 🏃
-colorFrom: blue
-colorTo: purple
-sdk: gradio
-sdk_version: 6.0.1
-app_file: app.py
-pinned: false
-short_description: Python app that visually simulates merge sort algorithm
----
+
 
 <div align="center">
 
@@ -96,7 +86,7 @@ The following diagram illustrates the logic implemented in the code:
 - **Result:** You will see the output visualization of the input array as it is passed through the Merge Sort algorithm.
 
 ## Author & Acknowledgment
-- **Author:** [Your Name Here]
+- **Author:** Michael Esho
 - **Course:** CISC-121
 - **University:** Queen's University
 - **Project Inspiration:** Merge Sort Algorithm Visualization

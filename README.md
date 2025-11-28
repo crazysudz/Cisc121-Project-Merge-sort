@@ -80,7 +80,7 @@ The flow is designed as: **Input** (User provides a raw list) → **Processing**
 
 The following diagram illustrates the logic implemented in the code:
 
- ![Logo](Mergesort_flowchart.svg)
+ ![FLowchart](Mergesort_flowchart.svg)
 
 ---
 

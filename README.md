@@ -23,9 +23,10 @@ short_description: Python app that visually simulates merge sort algorithm
 
 </div>
 
-<img src="./CISC 121 002 Mergesort Project test.gif"/>
 
 ---
+## Demo video
+<img src="./CISC 121 002 Mergesort Project test.gif"/>
 
 ## 🚀 Objective
 
@@ -36,9 +37,10 @@ The goal of this project is to create a Python app that demonstrates the **Merge
 | File | Description |
 | :--- | :--- |
 | `app.py` | The main application file |
-| `requirements.txt` | List of dependencies (i.e., Python packages, e.g., Gradio) |
-| `README.md` | Documentation matching marking criteria |
-| **Hugging Face App** | The deployed version of the app (Linked above) |
+| `CISC 121 002 Mergesort Project test.gif` | Test of the program as a gif |
+| `Mergesort_flowchart.svg` | flowchart showing the logic behind the sort |
+| `README.md` | Documentation pf the program |
+| **Hugging Face App** | https://huggingface.co/spaces/smallduds/CISC_121_002_Mergesort_Project |
 
 ---
 
@@ -51,7 +53,7 @@ I chose **Merge Sort** to implement and visualize. It creates a unique decision 
 <details>
 <summary><b>1. Decomposition</b></summary>
 
-I broke the Merge Sort algorithm down into distinct smaller steps: the `mergeSort` function (which recursively splits the array) and the `merge` function (which compares and combines the split arrays).
+I broke the Merge Sort algorithm down into  smaller steps: the `mergeSort` function which recursively splits the array and the `merge` function which compares and combines the split arrays.
 
 </details>
 
@@ -98,3 +100,4 @@ The following diagram illustrates the logic implemented in the code:
 - **Python**: Core programming language
 - **Gradio**: Web-based GUI framework
 - **Hugging Face Spaces**: Deployment platform
+- **Gemini AI**: Help with HTML aspects of code

@@ -58,14 +58,14 @@ The algorithm relies on a repeating pattern of finding the middle index, dividin
 <details>
 <summary><b>3. Abstraction</b></summary>
 
-The visualization abstracts away the low-level memory allocation details. It focuses on showing the user the logical flow: the input, the splitting process, and the final output, discarding unnecessary internal processing details from the visual feed.
+The visualization only focuses on showing the user the logical flow of the input, the splitting process, and the final output, making it so that the user only needs to understand how the algorithim works and not the code behind it
 
 </details>
 
 <details>
 <summary><b>4. Algorithm Design</b></summary>
 
-The flow is designed as: **Input** (User provides a raw list) → **Processing** (Recursive Divide & Conquer) → **Output** (Sorted List displayed in GUI).
+The flow is designed as: **Input** User provides a raw list → **Processing** Recursive Divide & Conquer → **Output** Sorted List displayed in GUI.
 
 </details>
 

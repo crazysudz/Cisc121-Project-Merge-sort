@@ -80,36 +80,8 @@ The flow is designed as: **Input** (User provides a raw list) → **Processing**
 
 The following diagram illustrates the logic implemented in the code:
 
-flowchart TD
-    Start([Start]) --> Input[/Input: arr, left, right/]
-    Input --> MSStart[mergeSort Function]
-    MSStart --> CheckBase{left < right?}
-    CheckBase -->|No| ReturnBase[Return - Base Case]
-    CheckBase -->|Yes| CalcMid[mid = left + right // 2]
-    CalcMid --> RecurseLeft[mergeSort arr, left, mid]
-    RecurseLeft -.Recursive Call.-> MSStart
-    RecurseLeft --> RecurseRight[mergeSort arr, mid+1, right]
-    RecurseRight -.Recursive Call.-> MSStart
-    RecurseRight --> MergeCall[Call merge Function]
-    MergeCall --> CalcSizes[n1 = mid - left + 1<br/>n2 = right - mid]
-    CalcSizes --> CreateArrays[Create L and R<br/>Copy data from arr]
-    CreateArrays --> InitPointers[i = 0, j = 0, k = left]
-    InitPointers --> MainLoop{i < n1 AND<br/>j < n2?}
-    MainLoop -->|Yes| Compare{L ≤ R?}
-    Compare -->|Yes| TakeLeft[arr = L<br/>i++, k++]
-    Compare -->|No| TakeRight[arr = R<br/>j++, k++]
-    TakeLeft --> MainLoop
-    TakeRight --> MainLoop
-    MainLoop -->|No| CopyLeft{Remaining<br/>in L?}
-    CopyLeft -->|Yes| AddLeft[Copy L to arr<br/>i++, k++]
-    AddLeft --> CopyLeft
-    CopyLeft -->|No| CopyRight{Remaining<br/>in R?}
-    CopyRight -->|Yes| AddRight[Copy R to arr<br/>j++, k++]
-    AddRight --> CopyRight
-    CopyRight -->|No| MergeDone[Return from merge]
-    MergeDone --> ReturnBase
-    ReturnBase --> Output[/Output: Sorted arr/]
-    Output --> End([End])
+ ![Logo](Mergesort_flowchart.svg)
+
 ---
 
 ## 🎯 Features

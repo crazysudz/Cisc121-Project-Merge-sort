@@ -88,11 +88,11 @@ The following diagram illustrates the logic implemented in the code:
 
 ---
 
-## 🎯 Features
-
-- **Interactive Visualization**: Watch the merge sort algorithm step through your data
-- **User-Friendly Interface**: Built with Gradio for easy interaction
-- **Educational Tool**: Perfect for learning and teaching sorting algorithms
+## 🎯 How To Use The App
+- **Input Data:** Enter an integer-only array in the input box, with commas separating each element.
+- **Random Generation:** Alternatively, click the `Generate Random` button to create a random array.
+- **Visualize:** Once you have an array you are happy with, press the `Sort & Visualize` button.
+- **Result:** You will see the output visualization of the input array as it is passed through the Merge Sort algorithm.
 
 ## 🛠️ Technologies Used
 

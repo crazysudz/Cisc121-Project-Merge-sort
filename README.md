@@ -74,6 +74,7 @@ The flow is designed as: **Input** User provides a raw list → **Processing** R
 ## Algorithm Flowchart
 
 The following diagram illustrates the logic implemented in the code:
+
 <img src="./Mergesort_flowchart.png">
 
 

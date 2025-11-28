@@ -30,7 +30,7 @@ The goal of this project is to create a Python app that demonstrates the **Merge
 | `app.py` | The main application file |
 | `CISC 121 002 Mergesort Project test.gif` | Test of the program as a gif |
 | `Mergesort_flowchart.svg` | flowchart showing the logic behind the sort |
-| `README.md` | Documentation pf the program |
+| `README.md` | Documentation |
 | **Hugging Face App** | https://huggingface.co/spaces/smallduds/CISC_121_002_Mergesort_Project |
 
 ---

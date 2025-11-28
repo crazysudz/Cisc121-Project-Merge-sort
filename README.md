@@ -24,7 +24,6 @@ short_description: Python app that visually simulates merge sort algorithm
 </div>
 
 <img src="./CISC 121 002 Mergesort Project test.gif"/>
-![til](./CISC 121 002 Mergesort Project test.gif)
 
 ---
 

@@ -20,8 +20,7 @@
 
 ## Objective
 
-The goal of this project is to create a Python app that demonstrates the **Merge Sort** algorithm in a visually interactive way using a graphical user interface. This application showcases computational thinking, algorithm design, testing, documentation skills, and knowledge of sorting algorithms.
-
+The goal of this project is to create a Python app that demonstrates the Merge Sort algorithm in a visually interactive way using a graphical user interface.
 ## Project Deliverables
 
 | File | Description |
@@ -29,7 +28,7 @@ The goal of this project is to create a Python app that demonstrates the **Merge
 | `requirements.txt` | The dependencies used |
 | `app.py` | The main application file |
 | `CISC 121 002 Mergesort Project test.gif` | Test of the program as a gif |
-| `Mergesort_flowchart.svg` | flowchart showing the logic behind the sort |
+| `Mergesort_flowchart.png` | flowchart showing the logic behind the sort |
 | `README.md` | Documentation |
 | **Hugging Face App** | https://huggingface.co/spaces/smallduds/CISC_121_002_Mergesort_Project |
 
@@ -37,7 +36,7 @@ The goal of this project is to create a Python app that demonstrates the **Merge
 
 ## Computational Thinking & Problem Breakdown
 
-I chose **Merge Sort** to implement and visualize. It creates a unique decision tree and effectively demonstrates the **divide and conquer** approach. Additionally, it maintains a time complexity of O(n log n) regardless of the dataset, making it highly efficient.
+I chose Merge Sort to visualize because it creates a unique decision tree and  demonstrates the **divide and conquer** approach. Additionally, it maintains a time complexity of O(n log n) regardless of the dataset, making it highly efficient.
 
 ### The Four Pillars
 
